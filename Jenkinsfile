@@ -5,7 +5,7 @@ pipeline   // comment: declarative pipeline always start with pipeline
     {
         stage('scm checkout') //stage name
         {
-            steps { echo git 'https://github.com/Bhushan175/mavenproject.git' } //it tells jenkins what to do
+            steps {  git branch: 'master', url: 'https://github.com/Bhushan175/mavenproject.git' } //it tells jenkins what to do
         }
     }
 }
