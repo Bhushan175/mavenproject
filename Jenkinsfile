@@ -15,6 +15,12 @@ pipeline   // comment: declarative pipeline always start with pipeline
             {sh 'mvn compile'}
             
         }
+        stage('execute unit test framework')
+        {
+            steps steps { withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MAVEN_HOME', mavenSettingsConfig: '', traceability: true) }
+            
+            {sh 'mvn test'}
+        }
     }
 
 }
