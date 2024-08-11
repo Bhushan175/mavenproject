@@ -33,9 +33,13 @@ pipeline   // comment: declarative pipeline always start with pipeline
           {
              steps {
               sshagent(['deploy-to-tomcat']) {
-              ssh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.80.37:/usr/share/tomcat/webapps '
+              sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.80.37:/usr/share/tomcat/webapps'
               }
              }
+          
+          
+          
+          
           }
     }
 }
