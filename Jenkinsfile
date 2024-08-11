@@ -37,8 +37,7 @@ pipeline   // comment: declarative pipeline always start with pipeline
               }
              }
           
-          
-          
+         
           
           }
     }
