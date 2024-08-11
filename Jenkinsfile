@@ -39,7 +39,7 @@ pipeline   // comment: declarative pipeline always start with pipeline
           
          }
 
-       stage('deploy to tomcat server')
+       stage('deploy to Prod Server manually')
           {
              input 'Do you apporve deployment?' ;
              steps {
