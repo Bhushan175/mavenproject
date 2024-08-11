@@ -9,7 +9,7 @@
 	<body>
 		<h2><%= title %></h2>
 		<p>
-			If you see this, the example war-file was correctly deployed! Congrats!
+			If you see this, the example war-file was correctly deployed! Congrats! Thank you ..!
 		</p>
 		<p>
 			<%= new java.util.Date() %>
