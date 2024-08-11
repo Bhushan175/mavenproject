@@ -41,9 +41,10 @@ pipeline   // comment: declarative pipeline always start with pipeline
 
        stage('deploy to Prod Server manually')
           {
-             input 'Do you apporve deployment?' ;
+             
              steps {
               sshagent(['deploy-to-tomcat']) {
+                input 'Do you apporve deployment?' ;
               sh 'scp -o StrictHostKeyChecking=no webapp/target/webapp.war ec2-user@172.31.80.37:/usr/share/tomcat/webapps/'
               }
              }
